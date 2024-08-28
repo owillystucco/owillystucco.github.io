@@ -1,54 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Exteriors</title>
-  <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Exteriors & Construction</title>
+    <link rel="stylesheet" href="css/_main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>
-      <img class="logo" src="img/logos/blue.png" height="250px"
-        alt="Advanced Exteriors logo with motto: we've got you covered" />
-    </h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#images">Images</a></li>
-      <li><a href="#footer">Contact</a></li>
-    </ul>
-  </header>
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Information section.</p>
-    </section>
-    <section id="services">
-      <h2>Services</h2>
-      <p>Services section.</p>
-    </section>
-    <section id="faq">
-      <h2>FAQ</h2>
-      <p>Questions section.</p>
-    </section>
-    <section id="images">
-      <h2>Images</h2>
-      <p>Image section.</p>
-    </section>
-  </main>
-  <footer id="footer">
-    <img class="logo" src="img/logos/blue.png" height="100px"
-      alt="Advanced Exteriors logo with motto: we've got you covered" />
-    <ul>
-      <li>
-        <a href="mail:stucco.exteriors@gmail.com">stucco.exteriors@gmail.com</a>
-      </li>
-      <li><a href="tel:+18016521836">(801) 652-1836</a></li>
-    </ul>
-  </footer>
-</body>
+    <header>
+        <nav>
+            <h1 class="logo-text">ADVANCED EXTERIORS & CONSTRUCTION</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#services">SERVICES</a>
+                <a href="#why-choose-us">WHY US?</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#reviews">REVIEWS</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="img/logos/blue.png" data-src="img/logos/blue.png" alt="Advanced Exteriors & Construction Logo" class="hero-logo">
+                <h1>Transform Your Exterior</h1>
+                <p>Expert solutions for stucco, siding, and more!</p>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-item fade-in">
+                        <i class="fas fa-brush"></i>
+                        <h3>Stucco Installation & Repair</h3>
+                        <p>Achieve a smooth, durable finish with high-quality stucco solutions.</p>
+                    </div>
+                    <div class="service-item fade-in">
+                        <i class="fas fa-home"></i>
+                        <h3>Exterior Siding</h3>
+                        <p>Enhance your home's protection and curb appeal with our wide range of siding options.</p>
+                    </div>
+                    <div class="service-item fade-in">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Stone Installation</h3>
+                        <p>Add timeless beauty and elegance with expertly installed stonework.</p>
+                    </div>
+                    <div class="service-item fade-in">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Hardie Board</h3>
+                        <p>Benefit from the modern durability and low maintenance of Hardie board.</p>
+                    </div>
+                    <div class="service-item fade-in">
+                        <i class="fas fa-fan"></i>
+                        <h3>Soffit & Fascia</h3>
+                        <p>Improve ventilation and aesthetics with our high-quality soffit and fascia services.</p>
+                    </div>
+                    <div class="service-item fade-in">
+                        <i class="fas fa-tint"></i>
+                        <h3>Gutter Installation</h3>
+                        <p>Safeguard your home from water damage with efficient and reliable gutter systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="service-area" class="service-area">
+            <div class="container">
+                <h2>Our Service Area</h2>
+                <div id="map" class="map"></div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="why-choose-us">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <div class="reasons-grid">
+                    <div class="reason-item fade-in">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Experienced Professionals</h3>
+                        <p>Our skilled team brings years of expertise and dedication to every project.</p>
+                    </div>
+                    <div class="reason-item fade-in">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Materials</h3>
+                        <p>We use only top-quality materials for lasting results and enhanced beauty.</p>
+                    </div>
+                    <div class="reason-item fade-in">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Personalized Service</h3>
+                        <p>We work closely with you to create customized solutions that meet your specific needs.</p>
+                    </div>
+                    <div class="reason-item fade-in">
+                        <i class="fas fa-clock"></i>
+                        <h3>Efficient & Reliable</h3>
+                        <p>No job is too big or too small. We deliver quality results on time, every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Our Work</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery1.jpg" alt="Stucco Project 1">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery2.jpg" alt="Siding Project 2">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery4.jpg" alt="Stucco Project 4">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery5.jpg" alt="Stucco Project 5">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery6.jpg" alt="Stucco Project 6">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery7.jpg" alt="Stucco Project 7">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery8.jpg" alt="Stucco Project 8">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery9.jpg" alt="Stucco Project 9">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="img/projects/gallery10.jpg" alt="Stucco Project 10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="review-grid">
+                    <div class="review-item fade-in">
+                        <div class="review-content">
+                            "Working with Will from Advanced Exteriors was a breeze. His dedication to quality and detail made all the difference. The stucco work exceeded my expectations, and I’d recommend Advanced Exteriors to anyone looking for reliable service and expert results."
+                        </div>
+                        <div class="review-author">
+                            <div class="review-author-info">
+                                <span class="review-author-name">David K.</span>
+                                <span class="review-author-title">Property Owner</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                    <div class="review-item fade-in">
+                        <div class="review-content">
+                            "My experience with Advanced Exteriors, particularly with Will, was outstanding. The team delivered exceptional stucco work and made the process effortless. I’m thrilled with the outcome and would definitely recommend them for any stucco needs."
+                        </div>
+                        <div class="review-author">
+                            <div class="review-author-info">
+                                <span class="review-author-name">Sandra W.</span>
+                                <span class="review-author-title">Homeowner</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">How long does a typical exterior renovation take?</div>
+                        <div class="faq-answer">
+                        <div class="faq-answer-content">The duration of an exterior renovation can vary depending on the scope of the project. A simple siding replacement might take 1-2 weeks, while a complete exterior overhaul could take 4-6 weeks or more. We always provide a detailed timeline before starting any project.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is stucco suitable for all climate types?</div>
+                        <div class="faq-answer">
+                        <div class="faq-answer-content">Stucco is versatile and can be used in most climates. However, it performs best in dry, warm areas. In regions with high humidity or frequent freeze-thaw cycles, special considerations may be necessary.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How often does stucco need to be maintained?</div>
+                        <div class="faq-answer">
+                        <div class="faq-answer-content">With proper installation, stucco requires minimal maintenance. It's recommended to inspect annually and clean every 2-3 years. Repainting may be needed every 5-10 years, depending on environmental factors.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can stucco be applied over existing siding?</div>
+                        <div class="faq-answer">
+                        <div class="faq-answer-content">In many cases, yes. Stucco can be applied over materials like wood, brick, or concrete. However, a professional assessment is necessary to ensure proper adhesion and prevent future issues.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What's the difference between traditional and synthetic stucco?</div>
+                        <div class="faq-answer">
+                        <div class="faq-answer-content">Traditional stucco is made from cement, lime, sand, and water, while synthetic stucco (EIFS) uses acrylic resins and other additives. Synthetic stucco is more flexible and offers better insulation, but traditional stucco is often more durable and cost-effective.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Advanced Exteriors & Construction</h3>
+                </div>
+                <div class="contact-links">
+                    <a href="tel:+18016521836"><i class="fas fa-phone"></i> (801) 652-1836</a>
+                    <a href="mailto:stucco.exteriors@gmail.com"><i class="fas fa-envelope"></i> stucco.exteriors@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Advanced Exteriors & Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

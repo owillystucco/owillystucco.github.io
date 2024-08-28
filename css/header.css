@@ -1,0 +1,131 @@
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 9999; /* Increased z-index */
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: var(--navy-blue);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+header.scrolled .logo-text {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+}
+
+.nav-links a {
+    font-family: var(--font-heading);
+    text-decoration: none;
+    color: var(--navy-blue);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header.scrolled .nav-links a {
+    color: #ffffff;
+}
+
+.nav-links a:hover {
+    background-color: rgba(26, 42, 58, 0.1);
+}
+
+header.scrolled .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--navy-blue);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+header.scrolled .nav-toggle {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 0 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        height: 60px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        height: auto;
+    }
+
+    header.scrolled .nav-links {
+        background-color: var(--navy-blue);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        font-size: 16px;
+        height: auto;
+    }
+}

@@ -1,0 +1,49 @@
+.why-choose-us {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: var(--navy-blue);
+}
+
+.reasons-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.reason-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.reason-item:hover {
+    transform: translateY(-5px);
+}
+
+.reason-item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reason-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.reason-item i {
+    font-size: 2.5rem;
+    color: var(--navy-blue);
+    margin-bottom: 15px;
+}
