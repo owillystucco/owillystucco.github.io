@@ -93,14 +93,14 @@ window.addEventListener('resize', updateHeight);
 function initMap() {
     const map = L.map('map', {
         center: [41.094120, -112.064621],
-        zoom: 9,
-        dragging: false,      // Disable panning
-        touchZoom: false,     // Disable touch zoom
-        scrollWheelZoom: false, // Disable scroll wheel zoom
-        doubleClickZoom: false, // Disable double click zoom
-        boxZoom: false,       // Disable box zooming
-        zoomControl: false,   // Remove zoom control buttons
-        keyboard: false       // Disable keyboard navigation
+        zoom: 7,
+        dragging: false,
+        touchZoom: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        zoomControl: false,
+        keyboard: false
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
