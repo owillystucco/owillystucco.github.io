@@ -3,21 +3,8 @@
         max-width: 720px;
     }
 
-    .nav-toggle {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-        position: static;
-        padding: 0;
-        box-shadow: none;
-        height: 100%;
-        align-items: center;
-    }
-
     .nav-links a {
-        padding: 0 20px;
+        padding: 0 10px;
         height: 100%;
         display: flex;
         align-items: center;

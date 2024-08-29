@@ -83,17 +83,6 @@ header.scrolled .nav-toggle {
 }
 
 @media (max-width: 1024px) {
-    .logo-text {
-        font-size: 20px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-        padding: 0 6px;
-    }
-}
-
-@media (max-width: 768px) {
     nav {
         height: 80px;
     }
