@@ -93,7 +93,7 @@ window.addEventListener('resize', updateHeight);
 function initMap() {
     const map = L.map('map', {
         center: [41.094120, -112.064621],
-        zoom: 7,
+        zoom: 8,
         dragging: false,
         touchZoom: false,
         scrollWheelZoom: false,
