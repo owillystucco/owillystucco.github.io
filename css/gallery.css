@@ -1,7 +1,6 @@
 .gallery {
     padding: 60px 0;
-    background-color: var(--navy-blue);
-    color: var(--white);
+    background-color: var(--light-gray);
 }
 
 .gallery h2 {

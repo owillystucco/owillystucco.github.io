@@ -39,6 +39,7 @@
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out 0.5s;
     animation-fill-mode: both;
+    text-decoration: none;
 }
 
 .hero p {

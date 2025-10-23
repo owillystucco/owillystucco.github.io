@@ -140,6 +140,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Image comparison elements
+document.querySelectorAll('.compare').forEach(compare => {
+    const input = compare.querySelector('input');
+    input.addEventListener('input', () => {
+        compare.style.setProperty('--mask-width', `${input.value}%`);
+    });
+    compare.style.setProperty('--mask-width', `${input.value}%`);
+});
+
 // Custom smooth scroll function with adjustable duration
 function smoothScrollTo(targetPosition, duration) {
     const startPosition = window.pageYOffset;
